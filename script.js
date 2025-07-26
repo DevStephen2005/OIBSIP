@@ -68,3 +68,35 @@ buttons.forEach(button => {
     expressionEl.textContent = expression;
   });
 });
+
+
+
+const form = document.getElementById("todo-form");
+const todoList = document.getElementById("todo-list");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const title = document.getElementById("title").value.trim();
+  const description = document.getElementById("description").value.trim();
+
+  if (!title || !description) return;
+
+  const tr = document.createElement("tr");
+
+  tr.innerHTML = `
+    <td>${title}</td>
+    <td>${description}</td>
+    <td><button class="delete-btn">X</button></td>
+  `;
+
+  todoList.appendChild(tr);
+
+  // Reset form
+  form.reset();
+
+  // Delete action
+  tr.querySelector(".delete-btn").addEventListener("click", () => {
+    todoList.removeChild(tr);
+  });
+});
