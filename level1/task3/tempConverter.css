@@ -1,0 +1,100 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container and card */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  text-align: center;
+}
+
+/* Typography */
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Form layout */
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #0072ff;
+  outline: none;
+}
+
+/* Result display */
+#result {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0072ff;
+  margin-top: 8px;
+  background: #f0f8ff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Button styling */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #0072ff;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005fcc;
+}
